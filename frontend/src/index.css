@@ -6,7 +6,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.site-container {
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+}
+.btn-primary {
+  background-color: #f0c040;
+  color: #000000;
+}
 header {
   background-color: rgb(37, 37, 37);
   padding: 1rem;
@@ -15,4 +24,31 @@ header a {
   color: #ffffff;
   font-weight: bold;
   text-decoration: none;
+}
+.rating span {
+  color: #ffc000;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  border: 1px #404040 solid;
+  margin: 1rem;
+}
+.product img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.product-info {
+  padding: 1rem;
+}
+.img-large {
+  max-width: 100%;
+}
+.img-thumbnail {
+  height: 80px;
 }
