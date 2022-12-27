@@ -28,6 +28,15 @@ app.get("/api/products/slug/:slug", (req, res) => {
   }
 });
 
+app.get("/api/product/:id", (req, res) => {
+  const product = data.products.find((x) => parseInt(req.params.id));
+  if (product) {
+    res.status(200).send(product);
+  } else {
+    res.status(404).send({ message: "Product Not Found" });
+  }
+});
+
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`serve at http://localhost:${port}`);
